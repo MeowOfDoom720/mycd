@@ -1,0 +1,24 @@
+./mycd / abc
+/abc
+./mycd /abc/def ghi
+/abc/def/ghi
+./mycd /abc/def ..
+/abc
+./mycd /abc/def /abc
+/abc
+./mycd /abc/def /abc/klm
+/abc/klm
+./mycd /abc/def ../..
+/
+./mycd /abc/def ../../..
+/
+./mycd /abc/def .
+/abc/def
+./mycd /abc/def ..klm
+..klm: No such file or directory
+./mycd /abc/def //////
+/
+./mycd /abc/def ......
+......: No such file or directory
+./mycd /abc/def ../gh///../klm/.
+/abc/klm
