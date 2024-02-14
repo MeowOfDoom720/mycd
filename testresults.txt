@@ -1,0 +1,48 @@
+Test 1: PASS
+Args:  / abc
+Program Output: /abc
+
+Test 2: PASS
+Args:  /abc/def ghi
+Program Output: /abc/def/ghi
+
+Test 3: PASS
+Args:  /abc/def ..
+Program Output: /abc
+
+Test 4: PASS
+Args:  /abc/def /abc
+Program Output: /abc
+
+Test 5: PASS
+Args:  /abc/def /abc/klm
+Program Output: /abc/klm
+
+Test 6: PASS
+Args:  /abc/def ../..
+Program Output: /
+
+Test 7: PASS
+Args:  /abc/def ../../..
+Program Output: /
+
+Test 8: PASS
+Args:  /abc/def .
+Program Output: /abc/def
+
+Test 9: PASS
+Args:  /abc/def ..klm
+Program Output: ..klm: No such file or directory
+
+Test 10: PASS
+Args:  /abc/def //////
+Program Output: /
+
+Test 11: PASS
+Args:  /abc/def ......
+Program Output: ......: No such file or directory
+
+Test 12: PASS
+Args:  /abc/def ../gh///../klm/.
+Program Output: /abc/klm
+
