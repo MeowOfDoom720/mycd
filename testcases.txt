@@ -1,24 +1,47 @@
-./mycd / abc
-/abc
-./mycd /abc/def ghi
-/abc/def/ghi
-./mycd /abc/def ..
-/abc
-./mycd /abc/def /abc
-/abc
-./mycd /abc/def /abc/klm
-/abc/klm
-./mycd /abc/def ../..
-/
-./mycd /abc/def ../../..
-/
-./mycd /abc/def .
-/abc/def
-./mycd /abc/def ..klm
-..klm: No such file or directory
-./mycd /abc/def //////
-/
-./mycd /abc/def ......
-......: No such file or directory
-./mycd /abc/def ../gh///../klm/.
-/abc/klm
+Test 1:
+input=./mycd / abc
+expected_output=/abc
+
+Test 2:
+input=./mycd /abc/def ghi
+expected_output=/abc/def/ghi
+
+Test 3:
+input=./mycd /abc/def ..
+expected_output=/abc
+
+Test 4:
+input=./mycd /abc/def /abc
+expected_output=/abc
+
+Test 5:
+input=./mycd /abc/def /abc/klm
+expected_output=/abc/klm
+
+Test 6:
+input=./mycd /abc/def ../..
+expected_output=/
+
+Test 7:
+input=./mycd /abc/def ../../..
+expected_output=/
+
+Test 8:
+input=./mycd /abc/def .
+expected_output=/abc/def
+
+Test 9:
+input=./mycd /abc/def ..klm
+expected_output=..klm: No such file or directory
+
+Test 10:
+input=./mycd /abc/def //////
+expected_output=/
+
+Test 11:
+input=./mycd /abc/def ......
+expected_output=......: No such file or directory
+
+Test 12:
+input=./mycd /abc/def ../gh///../klm/.
+expected_output=/abc/klm
